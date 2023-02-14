@@ -10,7 +10,7 @@ public class signIn {
         try {
             settings.clearScreen();
             System.out.println("-----------------------");
-            System.out.println("Vending Machine System");
+            System.out.println(" - Automat Do Napojów - ");
             System.out.println("-----------------------");
             System.out.print("Podaj login: ");
             String login = scanner.nextLine();
@@ -27,12 +27,10 @@ public class signIn {
                     adminPanel.menu();
                 } else {
                     System.out.println("Niepoprawne hasło, spróbuj ponownie");
-//                    settings.clearScreenWait();
                     logowanie();
                 }
             } else {
                 System.out.println("Niepoprawny login lub hasło, spróbuj ponownie");
-//                settings.clearScreenWait();
                 logowanie();
             }
         } catch (SQLException e) {

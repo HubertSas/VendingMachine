@@ -186,11 +186,11 @@ public class adminPanel {
         scanner.nextLine();
         String potionName = scanner.nextLine();
 
-        int potionPrice;
+        double potionPrice;
         while (true) {
-            System.out.print("Podaj cenę napoju: ");
+            System.out.print("Podaj cenę napoju (zl,gr): ");
             try {
-                potionPrice = scanner.nextInt();
+                potionPrice = scanner.nextDouble();
 
                 int quantity;
                 while (true) {
@@ -237,11 +237,11 @@ public class adminPanel {
             try {
                 potionId = scanner.nextInt();
 
-                int newPrice;
+                double newPrice;
                 while (true) {
                     System.out.print("Podaj nową cenę produktu: ");
                     try {
-                        newPrice = scanner.nextInt();
+                        newPrice = scanner.nextDouble();
 
                         if (newPrice > 0) {
                             String aktualizacjaSztuk = "UPDATE `produkty` SET `cena_produktu`='"+newPrice+"' WHERE `id_produktu` = '"+potionId+"'";
@@ -367,10 +367,10 @@ public class adminPanel {
             String zapytanie = "SELECT * FROM `kasetka`";
             ResultSet resultPracownik = queryExecutor.executeSelect(zapytanie);
 
-            int table2 = 0;
+            double table2 = 0;
             while (resultPracownik.next()) {
 
-                table2 = resultPracownik.getInt("saldo");
+                table2 = resultPracownik.getDouble("saldo");
 
                 if (table2 > 0) {
                     System.out.println("Twoje saldo to: " + table2 + " zł");

@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.sql.*;
 
 public class mysqlConnect {
-    private static String URL = "jdbc:mysql://localhost:3306/vendingmachine";
+    private static String URL = "jdbc:mysql://localhost:3306/vendingmachinee";
     private static String user = "root";
     private static String pass = "";
 
